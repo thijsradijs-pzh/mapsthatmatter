@@ -1,4 +1,5 @@
 // app/layout.tsx
+import Link from "next/link";
 import './globals.css'
 import { ReactNode } from 'react'
 
