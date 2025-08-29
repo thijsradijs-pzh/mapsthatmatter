@@ -1,69 +1,72 @@
-// app/layout.tsx
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import Link from "next/link";
-import './globals.css'
-import { ReactNode } from 'react'
 
-export const metadata = {
-  title: 'MapsThatMatter — Ethical maps & reproducible geospatial',
-  description:
-    'Open-source geospatial consulting for the public good. H3, Sedona, Databricks, open standards.',
-  metadataBase: new URL('https://mapsthatmatter.io'),
-  openGraph: {
-    title: 'MapsThatMatter',
-    description: 'Ethical cartography & reproducible spatial data pipelines.',
-    url: 'https://mapsthatmatter.io',
-    images: [{ url: '/og-image.png', width: 1200, height: 630 }],
-  },
-  robots: { index: true, follow: true }
-}
+const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const metadata: Metadata = {
+  title: "MapsThatMatter",
+  description: "Open-source geospatial consulting for the public good",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body>
-        <div className="grid-bg" />
-        <Nav />
-        <main className="container">{children}</main>
-        <Footer />
+      <body className={inter.className}>
+        <header className="w-full border-b border-gray-200 p-4">
+          <nav className="mx-auto flex max-w-6xl items-center justify-between">
+            {/* ✅ internal navigation uses Link */}
+            <Link href="/" className="text-xl font-bold">
+              MapsThatMatter
+            </Link>
+
+            <div className="flex space-x-4">
+              {/* ✅ internal links */}
+              <Link href="/projects" className="hover:underline">
+                Projects
+              </Link>
+              <Link href="/services" className="hover:underline">
+                Services
+              </Link>
+              <Link href="/writing" className="hover:underline">
+                Writing
+              </Link>
+              <Link href="/contact" className="hover:underline">
+                Contact
+              </Link>
+
+              {/* 🌍 external links stay <a> */}
+              <a
+                href="https://github.com/thijsradijs-pzh/mapsthatmatter"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hover:underline"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/company/mapsthatmatter"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="hover:underline"
+              >
+                LinkedIn
+              </a>
+            </div>
+          </nav>
+        </header>
+
+        <main className="mx-auto max-w-6xl p-4">{children}</main>
+
+        <footer className="mt-12 border-t border-gray-200 p-4 text-center text-sm text-gray-500">
+          © 2025 MapsThatMatter.io. Some rights reserved.
+        </footer>
       </body>
     </html>
-  )
-}
-
-function Nav(){
-  return (
-    <header className="sticky top-0 z-10 backdrop-blur supports-[backdrop-filter]:bg-black/30 border-b border-[var(--line)]">
-      <div className="container flex items-center justify-between py-3">
-        <a href="/" className="font-semibold">MapsThatMatter</a>
-        <nav className="hidden sm:flex gap-6 text-sm text-[var(--muted)]">
-          <a href="#projects">Projects</a>
-          <a href="#services">Services</a>
-          <a href="#writing">Writing</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <a className="btn btn-primary" href="#contact">Start a project</a>
-      </div>
-    </header>
-  )
-}
-
-function Footer(){
-  return (
-    <footer className="section">
-      <div className="container grid gap-6 sm:grid-cols-2">
-        <div>
-          <div className="kicker">NL / EU based</div>
-          <p className="text-[var(--muted)] mt-2">
-            Open-source geospatial consulting for the public good.
-          </p>
-        </div>
-        <div className="sm:text-right space-x-4">
-          <a href="mailto:hello@mapsthatmatter.org">hello@mapsthatmatter.org</a>
-          <a href="https://github.com/thijsradijs-pzh/mapsthatmatter" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com" rel="noopener">LinkedIn</a>
-        </div>
-      </div>
-      <div className="container text-xs text-[var(--muted)] mt-6">© 2025 MapsThatMatter.org • Some rights reserved.</div>
-    </footer>
-  )
+  );
 }
