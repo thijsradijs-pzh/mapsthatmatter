@@ -64,18 +64,19 @@ export default function Home() {
               <div className="space-y-2">
                 <div className="text-sm text-muted-foreground font-mono tracking-wider">PORTFOLIO / 2025</div>
                 <h1 className="text-6xl lg:text-7xl font-light tracking-tight">
-                  Jordan
+                  Thijs
                   <br />
-                  <span className="text-muted-foreground">Chen</span>
+                  <span className="text-muted-foreground">Oosterhuis</span>
                 </h1>
               </div>
 
               <div className="space-y-6 max-w-md">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Software engineer crafting digital experiences at the intersection of
-                  <span className="text-foreground"> design</span>,<span className="text-foreground"> technology</span>,
-                  and
-                  <span className="text-foreground"> human behavior</span>.
+                  Solutions Architect for Geo and Remote Sensing data, transforming complex spatial datasets into
+                  actionable insights through
+                  <span className="text-foreground"> geo-data cubes</span>,
+                  <span className="text-foreground"> AI-driven analysis</span>, and
+                  <span className="text-foreground"> policy innovation</span>.
                 </p>
 
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -83,7 +84,7 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                     Available for work
                   </div>
-                  <div>San Francisco, CA</div>
+                  <div>The Hague, NL</div>
                 </div>
               </div>
             </div>
@@ -92,8 +93,8 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">CURRENTLY</div>
                 <div className="space-y-2">
-                  <div className="text-foreground">Senior Frontend Engineer</div>
-                  <div className="text-muted-foreground">@ Vercel</div>
+                  <div className="text-foreground">Solutions Architect Geo</div>
+                  <div className="text-muted-foreground">@ Provincie Zuid-Holland</div>
                   <div className="text-xs text-muted-foreground">2023 — Present</div>
                 </div>
               </div>
@@ -101,14 +102,16 @@ export default function Home() {
               <div className="space-y-4">
                 <div className="text-sm text-muted-foreground font-mono">FOCUS</div>
                 <div className="flex flex-wrap gap-2">
-                  {["React", "TypeScript", "Next.js", "Design Systems", "AI/ML"].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                  {["GIS & Remote Sensing", "Python & R", "Earth Observation", "Geo-Data Cubes", "Policy Analysis"].map(
+                    (skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 text-xs border border-border rounded-full hover:border-muted-foreground/50 transition-colors duration-300"
+                      >
+                        {skill}
+                      </span>
+                    ),
+                  )}
                 </div>
               </div>
             </div>
@@ -119,38 +122,48 @@ export default function Home() {
           <div className="space-y-16">
             <div className="flex items-end justify-between">
               <h2 className="text-4xl font-light">Selected Work</h2>
-              <div className="text-sm text-muted-foreground font-mono">2019 — 2025</div>
+              <div className="text-sm text-muted-foreground font-mono">2014 — 2025</div>
             </div>
 
             <div className="space-y-12">
               {[
                 {
                   year: "2023",
-                  role: "Senior Frontend Engineer",
-                  company: "Vercel",
-                  description: "Leading frontend architecture for developer tools and AI-powered features.",
-                  tech: ["React", "TypeScript", "Next.js"],
+                  role: "Solutions Architect Geo",
+                  company: "Provincie Zuid-Holland",
+                  description:
+                    "Developing geo-data cubes and spatial analysis solutions for policy decision-making in The Hague.",
+                  tech: ["GIS", "Python", "Spatial Analysis"],
                 },
                 {
                   year: "2022",
-                  role: "Frontend Engineer",
-                  company: "Linear",
-                  description: "Built performant interfaces for project management and team collaboration.",
-                  tech: ["React", "GraphQL", "Framer Motion"],
+                  role: "Earth Observation Application Developer",
+                  company: "Space4Good",
+                  description: "Building applications for satellite data processing and earth observation analytics.",
+                  tech: ["Remote Sensing", "Satellite Data", "AI/ML"],
                 },
                 {
-                  year: "2021",
-                  role: "Full Stack Developer",
-                  company: "Stripe",
-                  description: "Developed payment infrastructure and merchant-facing dashboard features.",
-                  tech: ["Ruby", "React", "PostgreSQL"],
+                  year: "2018",
+                  role: "Earth Observation Application Expert",
+                  company: "CGI",
+                  description:
+                    "Processing and analyzing earth observation data for various applications in Frascati, Italy.",
+                  tech: ["SNAP", "ESA Software", "Data Processing"],
                 },
                 {
-                  year: "2019",
-                  role: "Software Engineer",
-                  company: "Airbnb",
-                  description: "Created booking flow optimizations and host management tools.",
-                  tech: ["React", "Node.js", "MySQL"],
+                  year: "2015",
+                  role: "GIS & Remote Sensing Aviation Expert",
+                  company: "EagleView Netherlands",
+                  description:
+                    "Managing agricultural data acquisition across Southeast Asia, South America, and the Pacific region.",
+                  tech: ["QGIS", "ArcGIS", "Agricultural Mapping"],
+                },
+                {
+                  year: "2014",
+                  role: "Remote Sensing Intern",
+                  company: "GIZ",
+                  description: "Mapping deforestation and tropical rainforest logging in Fiji using satellite imagery.",
+                  tech: ["Remote Sensing", "Forest Mapping", "Satellite Analysis"],
                 },
               ].map((job, index) => (
                 <div
@@ -194,33 +207,18 @@ export default function Home() {
             <div className="grid lg:grid-cols-2 gap-8">
               {[
                 {
-                  title: "The Future of Web Development",
-                  excerpt: "Exploring how AI and automation are reshaping the way we build for the web.",
-                  date: "Dec 2024",
-                  readTime: "5 min",
-                },
-                {
-                  title: "Design Systems at Scale",
-                  excerpt: "Lessons learned from building and maintaining design systems across multiple products.",
-                  date: "Nov 2024",
+                  title: "From Chaos to Clarity: How a Geo-Data Cube Can Help Fix the Netherlands",
+                  excerpt:
+                    "All we had to do was eat, poop, reproduce, and let others do the same. Yet we face housing shortages, growing inequality, and climate pressure. A geo-datacube shows how to untangle these challenges.",
+                  date: "Aug 2025",
                   readTime: "8 min",
-                },
-                {
-                  title: "Performance-First Development",
-                  excerpt: "Why performance should be a first-class citizen in your development workflow.",
-                  date: "Oct 2024",
-                  readTime: "6 min",
-                },
-                {
-                  title: "The Art of Code Review",
-                  excerpt: "Building better software through thoughtful and constructive code reviews.",
-                  date: "Sep 2024",
-                  readTime: "4 min",
+                  url: "https://mapsthatmatter.substack.com/p/from-chaos-to-clarity-how-a-geo-data",
                 },
               ].map((post, index) => (
                 <article
                   key={index}
                   className="group p-8 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-500 hover:shadow-lg cursor-pointer"
+                  onClick={() => post.url && window.open(post.url, "_blank")}
                 >
                   <div className="space-y-4">
                     <div className="flex items-center justify-between text-xs text-muted-foreground font-mono">
@@ -264,15 +262,16 @@ export default function Home() {
 
               <div className="space-y-6">
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Always interested in new opportunities, collaborations, and conversations about technology and design.
+                  Always interested in new opportunities, collaborations, and conversations about geo-data, policy
+                  innovation, and spatial analysis.
                 </p>
 
                 <div className="space-y-4">
                   <Link
-                    href="mailto:jordan@example.com"
+                    href="mailto:oosterhuis.thijs@gmail.com"
                     className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
                   >
-                    <span className="text-lg">jordan@example.com</span>
+                    <span className="text-lg">oosterhuis.thijs@gmail.com</span>
                     <svg
                       className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
                       fill="none"
@@ -291,10 +290,14 @@ export default function Home() {
 
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { name: "GitHub", handle: "@jordanchen", url: "#" },
-                  { name: "Twitter", handle: "@jordanchen", url: "#" },
-                  { name: "LinkedIn", handle: "jordan-chen", url: "#" },
-                  { name: "Dribbble", handle: "jordanchen", url: "#" },
+                  { name: "Substack", handle: "Maps That Matter", url: "https://mapsthatmatter.substack.com/" },
+                  {
+                    name: "LinkedIn",
+                    handle: "thijs-oosterhuis",
+                    url: "https://www.linkedin.com/in/thijs-oosterhuis/",
+                  },
+                  { name: "GitHub", handle: "@thijsoosterhuis", url: "#" },
+                  { name: "Twitter", handle: "@thijsoosterhuis", url: "#" },
                 ].map((social) => (
                   <Link
                     key={social.name}
@@ -317,7 +320,7 @@ export default function Home() {
         <footer className="py-16 border-t border-border">
           <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
             <div className="space-y-2">
-              <div className="text-sm text-muted-foreground">© 2025 Jordan Chen. All rights reserved.</div>
+              <div className="text-sm text-muted-foreground">© 2025 Thijs Oosterhuis. All rights reserved.</div>
               <div className="text-xs text-muted-foreground">Built with Next.js and deployed on Vercel</div>
             </div>
 
@@ -335,7 +338,7 @@ export default function Home() {
                   >
                     <path
                       fillRule="evenodd"
-                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                      d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707a1 1 0 001.414 0zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
                       clipRule="evenodd"
                     />
                   </svg>

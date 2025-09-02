@@ -10,8 +10,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Alex Johnson - Software Craftsman",
-  description: "Exploring the intersection of software engineering, people, and AI.",
+  title: "Thijs Oosterhuis - Product Designer",
+  description:
+    "Product designer crafting meaningful digital experiences through user research and strategic innovation.",
   generator: "v0.app",
 }
 
